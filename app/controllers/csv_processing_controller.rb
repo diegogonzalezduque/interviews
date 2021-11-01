@@ -19,14 +19,16 @@ class CsvProcessingController < ApplicationController
         @@file_path.each do |row|
             contact = Contact.new
             contact.name = row[name_col]
-            #contact.date_of_birth = row[date_of_birth]
+            contact.date_of_birth = row[date_of_birth]
             contact.phone = row[phone_col]
             contact.address = row[address]
             contact.credit_card = row[credit_card]
             contact.email = row[email]
-            if contact.validator  row[date_of_birth]
+            if contact.validator
                 current_user.contacts << contact
-                contact.save!
+                if contact.unique_email?
+                    contact.save!
+                end
             end
         end
 

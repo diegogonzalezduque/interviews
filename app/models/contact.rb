@@ -25,7 +25,6 @@ class Contact < ApplicationRecord
     date = nil
     ALLOWED_DATE_FORMATS.each do |format|
       begin
-        byebug
         date ||= Date.strptime(read_attribute_before_type_cast(:date_of_birth), format)
       rescue Date::Error
         next
