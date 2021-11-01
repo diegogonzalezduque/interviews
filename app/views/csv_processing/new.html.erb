@@ -1,0 +1,5 @@
+<%= form_for :csv, url: "column_matcher", method: "POST" do |form| %>
+  <%= form.file_field :csv_file %>
+  <br/>
+  <%= form.submit :submit %>
+<% end %>

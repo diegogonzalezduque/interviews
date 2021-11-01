@@ -1,0 +1,17 @@
+<h3>Please select the corresponding columns</h3>
+<%= form_for :matcher, :url => {:action => "create"} do |form| %>
+  Name
+  <%= form.select :name, @column_names %>
+  Date of birth
+  <%= form.select :date_of_birth, @column_names %>
+  Phone
+  <%= form.select :phone, @column_names %>
+  Address
+  <%= form.select :address, @column_names %>
+  Credit Card
+  <%= form.select :credit_card, @column_names %>
+  Email
+  <%= form.select :email, @column_names %>
+  <br/>
+  <%= form.submit :submit %>
+<% end %>
