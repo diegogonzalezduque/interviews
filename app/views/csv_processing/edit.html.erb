@@ -1,0 +1,30 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>
+        Contact name
+      </th>
+      <th>
+        Status
+      </th>
+      <th>
+        Error
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @contact_uploads.each do |cu| %>
+    <tr>
+      <td>
+        <%= cu.contact_name %>
+      </td>
+      <td>
+        <%= cu.status %>
+      </td>
+      <td>
+        <%= cu.error_message %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

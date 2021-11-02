@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  csv_processing: one
+  contact_name: MyText
+  status_cd: 1
+  error_message: MyText
+
+two:
+  csv_processing: two
+  contact_name: MyText
+  status_cd: 1
+  error_message: MyText
