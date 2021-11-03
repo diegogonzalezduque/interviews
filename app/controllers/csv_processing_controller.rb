@@ -76,6 +76,10 @@ class CsvProcessingController < ApplicationController
         @@file_path = list_row
     end
 
+    def async_create
+
+    end
+
     private
     def current_csv
         CsvProcessing.find params[:id]
